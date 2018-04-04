@@ -1,0 +1,25 @@
+{
+  "name": "travel-website",
+  "version": "1.0.0",
+  "description": "This is an practice website, based on the Agile Infoways free Travel Template PSD which can be found [here](https://dribbble.com/shots/1410329-Free-Travel-Template-PSD).",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalenai/travel-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalenai/travel-website/issues"
+  },
+  "homepage": "https://github.com/Kalenai/travel-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-imagemin": "^4.1.0"
+  }
+}
