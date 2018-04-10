@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
+$offwhite-color: #f9fafa;
+$mid-text-color: #9fb0c0;
+$dark-text-color: #263848;
 $highlight-color: #2aa997;
+$border-color: #3a4e61;
+
 
 /*
   =====================
@@ -45,13 +50,13 @@ button {
   font-size: 1.25rem;
   padding: 0.75rem 1.25rem;
   margin: 1rem;
-  color: #f9fafa;
+  color: $offwhite-color;
   background-color: $highlight-color;
   border: solid 2px $highlight-color;
 }
 
 button:hover {
-  border-color: #f9fafa;
+  border-color: $offwhite-color;
 }
 
 input {
@@ -76,7 +81,7 @@ input {
 }
 
 .logo-highlight {
-  color: #2aa997; 
+  color: $highlight-color; 
 }
 
 .nav-list {
@@ -85,16 +90,16 @@ input {
   display: flex;
   text-transform: uppercase;
   text-align: center;
-}
 
-.nav-list li {
-  padding: 1rem;
-  list-style: none;
-}
+  li {
+    padding: 1rem;
+    list-style: none;
+  }
 
-.nav-list li:hover {
-  color: #2aa997;
-}
+  li:hover {
+    color: $highlight-color;
+  }
+} 
 
 @media screen and (max-width: 1200px) {
   .main-nav {
@@ -106,11 +111,11 @@ input {
   .nav-list {
     justify-content: center;
     flex-wrap: wrap;
-  }
-  
-  .nav-list li {
-    padding: 0.5rem;
-    flex-basis: 30%;
+
+    li {
+      padding: 0.5rem;
+      flex-basis: 30%;
+    }
   }
 }
 
@@ -122,9 +127,9 @@ input {
 
 .hero {
   text-align: center;
-  background: #263848 url("hero-bg.jpg") no-repeat;
-  background-size: cover; 
-  color: #f9fafa;
+  background: $dark-text-color url("hero-bg.jpg") no-repeat;
+  background-size: cover;
+  color: $offwhite-color;
   height: 85vh;
   
 }
@@ -136,36 +141,36 @@ input {
   align-content: center;
   flex-wrap: wrap;
   text-shadow: 1px 1px 2px #111;
-}
 
-.cta * {
-  flex-basis: 100%;
-}
+  * {
+    flex-basis: 100%;
+  }
 
-.cta h3 {
-  text-transform: none;
-}
+  h3 {
+    text-transform: none;
+  }
 
-.cta button {
-  flex: 0 0 auto;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: solid 2px #f9fafa;
-  border-radius: 5px;
-}
+  button {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    background-color: #3338;
+    border: solid 2px $offwhite-color;
+    border-radius: 5px;
+  }
 
-.cta button:hover {
-  background-color: #2aa997;
-  border-color: #2aa997;
+  button:hover {
+    background-color: $highlight-color;
+    border-color: $highlight-color;
+  }
 }
 
 .query {
-  background-color: #263848;
+  background-color: $dark-text-color;
   width: 100%;
-  border-top: 1px solid #1b615f;
+  border-top: 1px solid $border-color;
   display: flex;
   text-align: center;
-  color: #9fb0c0;
+  color: $mid-text-color;
 }
 
 .query-inner {
@@ -174,18 +179,18 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.query-inner label {
-  font-size: 1.25rem;
+  label {
+    font-size: 1.25rem;
+  }
 }
 
 .query-text {
   padding: 1rem 2.0rem 1rem 0;
-  border-right: solid 1px #1b615f;
+  border-right: solid 1px $border-color;
   text-align: left;
-}
 
-.query-text strong {
-  color: #f9fafa;
+  strong {
+    color: $offwhite-color;
+  }
 }
