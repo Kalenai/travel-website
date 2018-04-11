@@ -5,12 +5,22 @@ var gulp         = require('gulp'),
     autoprefixer = require('autoprefixer'),
     cssnano      = require('cssnano'),
     imagemin     = require('gulp-imagemin'),
+    del          = require('del'),
     browserSync  = require('browser-sync').create();
 
-gulp.task('css', function() {
+gulp.task('sass', function() {
     gulp.src('src/assets/styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([ autoprefixer(), cssnano() ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./build'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('css', function() {
+    gulp.src('src/assets/styles/*.css')
+        .pipe(sourcemaps.init())
         .pipe(postcss([ autoprefixer(), cssnano() ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build'))
@@ -30,12 +40,19 @@ gulp.task('html', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['css', 'images', 'html'], function() {
+gulp.task('clean:build', function () {
+    return del.sync('build');
+});
+
+gulp.task('build', ['clean:build', 'sass', 'css', 'images', 'html']);
+
+gulp.task('default', ['sass', 'css', 'images', 'html'], function() {
     browserSync.init({
         server: "./build"
     });
 
-    gulp.watch('src/assets/styles/*.scss', ['css']);
+    gulp.watch('src/assets/styles/*.scss', ['sass']);
+    gulp.watch('src/assets/styles/*.css', ['css']);
     gulp.watch('src/assets/images/*', ['images']);
     gulp.watch('src/*.html', ['html']).on('change', browserSync.reload);
 });
