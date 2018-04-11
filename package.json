@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "npm run build && git subtree push --prefix build origin gh-pages",
+    "deploy": "npm run build && git subtree push --prefix build origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
