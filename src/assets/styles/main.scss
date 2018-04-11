@@ -3,7 +3,7 @@
 $offwhite-color: #f9fafa;
 $mid-text-color: #9fb0c0;
 $dark-text-color: #263848;
-$highlight-color: #2aa997;
+$highlight-color: #1dd2af;
 $border-color: #3a4e61;
 
 
@@ -17,7 +17,8 @@ $border-color: #3a4e61;
 *:before,
 *:after {
   box-sizing: border-box;
-  transition-duration: 0.125s;
+  transform: translate(0px, 0);
+  transition: all 0.25s ease;
 }
 
 html {
@@ -44,6 +45,17 @@ h1 {
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+h5 {
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: $mid-text-color;
+}
+
+h6 {
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 
 button {
@@ -179,6 +191,11 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  * {
+    
+  }
 
   label {
     font-size: 1.25rem;
@@ -193,4 +210,64 @@ input {
   strong {
     color: $offwhite-color;
   }
+}
+
+/*
+  =====================
+  = Specials
+  =====================
+*/
+
+.specials {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 1.0rem;;
+
+  h3 {
+    color: $dark-text-color;
+  }
+}
+
+.specials-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.special-offer {
+  background-color: #eee;
+  color: $dark-text-color;
+  flex: 0 1 20%;
+  margin: 1.0rem;
+  border: solid 5px #eee;
+  border-radius: 5px;
+  text-align: left;
+
+  img {
+    max-width: 100%;
+    min-width: 250px;
+  }
+
+  h5, h6 {
+    color: $dark-text-color;
+  }
+}
+
+.special-offer:hover {
+  background-color: $dark-text-color;
+  border-color: $highlight-color;
+  transform: scale(1.1);
+
+  h5 {
+    color: $offwhite-color;
+  }
+
+  h6 {
+    color: $mid-text-color;
+  }
+}
+
+.special-text {
+  padding: 0.5rem;
 }
