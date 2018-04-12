@@ -31,7 +31,7 @@ html {
   font-size: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0;
 }
 
@@ -390,5 +390,75 @@ input {
 @media screen and (max-width: 1200px) {
   .holiday-box {
     flex-basis: 30%;
+  }
+}
+
+/*
+  =====================
+  = Reviews
+  =====================
+*/
+
+.reviews {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 0;
+
+  h3 {
+    color: $dark-text-color;
+  }
+}
+
+.review-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+
+  p {
+    color: $highlight-color;
+    font-size: 1.125rem;
+    margin-top: 5px;
+  }
+
+  small {
+    color: $mid-text-color;
+  }
+}
+
+.review-box {
+  @include transition();
+  border-top: solid 3px transparent;
+  box-shadow: 0 0 2px $border-color;
+  flex: 1 0 25%;
+  padding: 1.0rem;
+  margin: 3.0rem 1.0rem; 
+}
+
+.review-box:hover {
+  border-top-color: $highlight-color;
+}
+
+@media screen and (max-width: 992px) {
+  .review-gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+  
+  .review-box {
+    max-width: 70%;;
+  }
+
+  .review-box:nth-of-type(2) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review-box {
+    max-width: 100%;
   }
 }
