@@ -5,6 +5,7 @@ $mid-text-color: #9fb0c0;
 $dark-text-color: #263848;
 $highlight-color: #1dd2af;
 $border-color: #3a4e61;
+$backdrop-color: rgba(38, 56, 72, 0.7);
 
 
 /*
@@ -154,6 +155,15 @@ input {
   justify-content: center;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-color;
+}
+
 .cta {
   height: 90%;
   padding: 0 1.0rem;
@@ -174,7 +184,7 @@ input {
   button {
     flex: 0 0 auto;
     text-transform: uppercase;
-    background-color: #3338;
+    background-color: transparent;
     border: solid 2px $offwhite-color;
     border-radius: 5px;
   }
@@ -317,8 +327,62 @@ input {
 */
 
 .holidays {
+  background: $dark-text-color url("holidays-bg.jpg") no-repeat;
+  background-size: cover;
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 4.5rem 1.0rem;
+  
+  h3 {
+    color: $offwhite-color;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $mid-text-color;
+    padding-top: 1.0rem;
+  }
+}
+
+.holidays-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: $offwhite-color;
+  
+
+  .holiday-box {
+    margin: 3.0rem 1.0rem;
+    text-align: center;
+  }
+}
+
+.holiday-icon {
+  font-size: 3.5rem;
+  margin: auto;
+  border: solid 5px $offwhite-color;
+  border-radius: 50%;
+  height: 10.0rem;
+  width: 10.0rem;
+  line-height: 10.0rem;
+}
+
+.holiday-box:hover {
+  color: $highlight-color;
+
+  .holiday-icon {
+    border: solid 5px $highlight-color;
+  }
+
+  p {
+    color: $highlight-color;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .holiday-box {
+    flex-basis: 30%;
+  }
 }
