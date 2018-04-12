@@ -31,6 +31,11 @@ html {
   font-size: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: $offwhite-color;
+}
+
 p, h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0;
 }
@@ -70,6 +75,7 @@ button {
   color: $offwhite-color;
   background-color: $highlight-color;
   border: solid 2px $highlight-color;
+  cursor: pointer;
 }
 
 button:hover {
@@ -200,6 +206,12 @@ input {
   }
 }
 
+/*
+  =====================
+  = Query
+  =====================
+*/
+
 .query {
   background-color: $dark-text-color;
   width: 100%;
@@ -262,6 +274,11 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .query-inner input {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -403,7 +420,7 @@ input {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 4.5rem 0;
+  padding: 4.5rem 1.0rem;
 
   h3 {
     color: $dark-text-color;
@@ -460,5 +477,173 @@ input {
 @media screen and (max-width: 768px) {
   .review-box {
     max-width: 100%;
+  }
+}
+
+/*
+  =====================
+  = Footer
+  =====================
+*/
+
+footer {
+  background-color: $dark-text-color;
+  color: $offwhite-color;
+  overflow: hidden;
+}
+
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.footer-section {
+  padding: 4.5rem 1.0rem;
+  margin: 0 1.0rem;
+  flex: 1;
+
+  h3 {
+    color: $highlight-color;
+    text-transform: none;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.subscribe-container {
+  display: inline-block;
+
+  input {
+    margin: 1.0rem 0;
+    max-width: 60%;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 20%;
+    border-radius: 5px;
+  }
+}
+
+.news-article {
+  padding-bottom: 1.0rem;
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  small {
+    color: $highlight-color;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  @include transition();
+  font-size: 0.875rem;
+  color: $offwhite-color;
+  border: solid 1px $offwhite-color;
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+
+.tag:hover {
+  background-color: $highlight-color;
+  border-color: $highlight-color;
+}
+
+.social-buttons {
+  margin-top: 0.5rem;
+
+  a {
+    @include transition();
+    padding-right: 0.5rem;
+  }
+}
+
+.social-buttons a:hover {
+  color: $highlight-color;
+}
+
+.footer-nav {
+  width: 100%;
+  border-top: solid 1px $border-color;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  a {
+    @include transition();
+    margin: 0 0.5rem;
+  }
+}
+
+.footer-nav a:hover {
+  color: $highlight-color;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  margin: auto;
+  text-align: center;
+}
+
+.to-top-btn {
+  @include transition();
+  background-color: $highlight-color;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform: translateY(25px) rotate(45deg);
+  margin: auto;
+  margin-top: 1.5rem;
+
+  span {
+    font-size: 3.25rem;
+    display: inline-block;
+    transform-origin: -100%;
+    transform: translateY(20px) translateX(20px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .top-footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-footer {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 0;
+    flex-basis: 90%;
+    padding: 4.5rem 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .footer-section:last-of-type {
+    padding-bottom: 4.5rem;
+  }
+
+  .footer-nav ul {
+    padding: 0;
   }
 }

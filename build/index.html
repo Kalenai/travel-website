@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -187,56 +188,78 @@
   </section>
 
   <footer>
-    <div>
-      <h3>Newsletter</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-      <input type="email" placeholder="subscribe">
-      <button>go</button>
-    </div>
-    <div>
-      <h3>Latest News</h3>
-      <article></article>
-      <article></article>
-    </div>
-    <div>
-      <h3>Tags</h3>
-      <h5 class="tag">Agent Login</h5>
-      <h5 class="tag">Customer Login</h5>
-      <h5 class="tag">Not a member?</h5>
-      <h5 class="tag">Contact</h5>
-      <h5 class="tag">New Horizons</h5>
-      <h5 class="tag">Landscape</h5>
-      <h5 class="tag">Tags</h5>
-      <h5 class="tag">Nice</h5>
-      <h5 class="tag">Some</h5>
-      <h5 class="tag">Portrait</h5>
-    </div>
-    <div>
-      <h3></h3>
-      <p></p>
-      <div class="social-buttons"></div>
+    <div class="top-footer">
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Laboriosam voluptatem rerum odio, pariatur illo voluptates? 
+        </p>
+        <div class="subscribe-container">
+          <input type="email" placeholder="subscribe...">
+          <button>GO</button>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Latest News</h3>
+        <div class="news-article">
+            <p>Postformat Gallery</p>
+            <small>April 12, 2018</small>
+        </div>
+        <div class="news-article">
+            <p>Snowboarding is fun!</p>
+            <small>January 27, 2018</small>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Tags</h3>
+        <div class="tags">
+          <h5 class="tag">Agent Login</h5>
+          <h5 class="tag">Customer Login</h5>
+          <h5 class="tag">Not a member?</h5>
+          <h5 class="tag">Contact</h5>
+          <h5 class="tag">New Horizons</h5>
+          <h5 class="tag">Landscape</h5>
+          <h5 class="tag">Tags</h5>
+          <h5 class="tag">Nice</h5>
+          <h5 class="tag">Some</h5>
+          <h5 class="tag">Portrait</h5>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Address</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        <div class="social-buttons fa-2x">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
     </div>
     <nav>
       <div class="footer-nav">
         <ul>
-          <li>Home</li>
+          <li><a href="#">Home</a></li>
           <li>::</li>
-          <li>Destinations</li>
+          <li><a href="#">Destinations</a></li>
           <li>::</li>
-          <li>Cruises</li>
+          <li><a href="#">Cruises</a></li>
           <li>::</li>
-          <li>Specials</li>
+          <li><a href="#">Specials</a></li>
           <li>::</li>
-          <li>Holidays</li>
+          <li><a href="#">Holidays</a></li>
           <li>::</li>
-          <li>Blog</li>
+          <li><a href="#">Blog</a></li>
           <li>::</li>
-          <li>Contact Us</li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
     </nav>
     <h5 class="copyright">&copy; 2018 Voyage.  All Rights Reserved.</h5>
-    <div class="to-top-btn"><a href="#">&uarr;</a></div>
+    <a href="#" class="to-top-btn">
+      <div class="to-top-btn"><span>&uarr;</span></div>
+    </a>
   </footer>
 </body>
 </html>
