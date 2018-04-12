@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
+@mixin transition {
+  transition: all 0.25s ease;
+}
+
 $offwhite-color: #f9fafa;
 $mid-text-color: #9fb0c0;
 $dark-text-color: #263848;
@@ -19,7 +23,6 @@ $backdrop-color: rgba(38, 56, 72, 0.7);
 *:after {
   box-sizing: border-box;
   transform: translate(0px, 0);
-  transition: all 0.25s ease;
 }
 
 html {
@@ -60,6 +63,7 @@ h6 {
 }
 
 button {
+  @include transition();
   font-size: 1.25rem;
   padding: 0.75rem 1.25rem;
   margin: 1rem;
@@ -105,6 +109,7 @@ input {
   text-align: center;
 
   li {
+    @include transition();
     padding: 1rem;
     list-style: none;
   }
@@ -284,6 +289,7 @@ input {
 }
 
 .special-offer {
+  @include transition();
   background-color: #eee;
   color: $dark-text-color;
   flex: 0 1 20%;
@@ -339,6 +345,7 @@ input {
   }
 
   p {
+    @include transition();
     font-size: 1.25rem;
     font-weight: 400;
     color: $mid-text-color;
@@ -350,16 +357,16 @@ input {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: $offwhite-color;
-  
 
   .holiday-box {
     margin: 3.0rem 1.0rem;
     text-align: center;
+    color: $offwhite-color;
   }
 }
 
 .holiday-icon {
+  @include transition();
   font-size: 3.5rem;
   margin: auto;
   border: solid 5px $offwhite-color;
@@ -370,10 +377,9 @@ input {
 }
 
 .holiday-box:hover {
-  color: $highlight-color;
-
   .holiday-icon {
-    border: solid 5px $highlight-color;
+    border-color: $highlight-color;
+    color: $highlight-color;
   }
 
   p {
