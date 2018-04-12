@@ -85,7 +85,7 @@ input {
 
 .main-nav {
   display: flex;
-  width: 65%;
+  width: 90%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
@@ -118,9 +118,14 @@ input {
     width: 100%;
     justify-content: center;
   }
+
+  .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .nav-list {
     justify-content: center;
     flex-wrap: wrap;
@@ -189,7 +194,7 @@ input {
 }
 
 .query-inner {
-  width: 65%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -198,6 +203,10 @@ input {
 
   label {
     font-size: 1.25rem;
+  }
+
+  input {
+    width: 300px;
   }
 }
 
@@ -208,12 +217,6 @@ input {
 
   strong {
     color: $offwhite-color;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .query-inner {
-    width: 90%;
   }
 }
 
@@ -233,15 +236,17 @@ input {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
   .query-inner label {
       flex-basis: 100%;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .query-inner input {
-      width: 320px;
+@media screen and (max-width: 768px) {
+  .query-inner label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
