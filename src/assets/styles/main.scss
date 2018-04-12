@@ -115,6 +115,7 @@ input {
 
 @media screen and (max-width: 1200px) {
   .main-nav {
+    width: 100%;
     justify-content: center;
   }
 }
@@ -142,12 +143,15 @@ input {
   background: $dark-text-color url("hero-bg.jpg") no-repeat;
   background-size: cover;
   color: $offwhite-color;
-  height: 85vh;
-  
+  min-height: 85vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 .cta {
   height: 90%;
+  padding: 0 1.0rem;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -180,7 +184,6 @@ input {
   background-color: $dark-text-color;
   width: 100%;
   border-top: 1px solid $border-color;
-  display: flex;
   text-align: center;
   color: $mid-text-color;
 }
@@ -192,10 +195,6 @@ input {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-  * {
-
-  }
 
   label {
     font-size: 1.25rem;
@@ -209,6 +208,40 @@ input {
 
   strong {
     color: $offwhite-color;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .query-inner {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .query-inner {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .query-text {
+    flex-basis: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: solid 1px $border-color;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .query-inner label {
+      flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .query-inner input {
+      width: 320px;
   }
 }
 
